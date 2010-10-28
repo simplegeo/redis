@@ -15,7 +15,7 @@ endif
 CCOPT= $(CFLAGS) $(CCLINK) $(ARCH) $(PROF)
 DEBUG?= -g -rdynamic -ggdb 
 
-INSTALL_TOP= /usr/local
+INSTALL_TOP= $(DESTDIR)/usr/local
 INSTALL_BIN= $(INSTALL_TOP)/bin
 INSTALL= cp -p
 
@@ -119,6 +119,7 @@ noopt:
 	make PROF="-pg" ARCH="-arch i386"
 
 install: all
+	mkdir -p $(INSTALL_BIN)
 	$(INSTALL) $(PRGNAME) $(INSTALL_BIN)
 	$(INSTALL) $(BENCHPRGNAME) $(INSTALL_BIN)
 	$(INSTALL) $(CLIPRGNAME) $(INSTALL_BIN)
