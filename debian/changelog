@@ -1,3 +1,9 @@
+redis (2:2.0.3-sg3) lucid; urgency=low
+
+  * UNRELEASED
+
+ -- SimpleGeo Nerds <nerds@simplegeo.com>  Thu, 28 Oct 2010 23:28:42 +0000
+
 redis (2:2.0.3-sg1) stable; urgency=low
 
   * New upstream release.
